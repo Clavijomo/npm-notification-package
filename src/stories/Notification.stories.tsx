@@ -1,51 +1,72 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Notification } from "../components/Notification";
+import { Person } from '@mui/icons-material';
+import React from 'react';
 
 const meta: Meta<typeof Notification> = {
     args: {
         title: 'Notificación de info',
+        type: 'info',
         subtitle: "Notificacion subtitle",
-        type: 'success',
     },
     argTypes: {
+        type: {
+            control: { type: 'radio' },
+            options: ['success', 'info', 'error', 'warning']
+        },
         duration: { control: { type: 'number' } },
-        actions: { control: { type: 'object' } }
+        isIcon: { control: { type: 'boolean' } }
     },
     title: 'Notification',
     component: Notification
 } satisfies Meta<typeof Notification>
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Notification>;
 
 export const Basic: Story = {
     args: {
         title: 'Éxito',
-        type: 'success',
+        type: "info",
     }
 };
 
-export const AutoCloseNotification: Story = {
+export const WithIconPersonalize: Story = {
     args: {
-        title: 'Notificación de Éxito',
-        subtitle: 'Esta notificación se cerrará automáticamente.',
-        type: 'success',
+        title: 'Con icono',
+        subtitle: 'Basico',
+        customIcon: <Person />
+    }
+}
+
+export const WithDuration: Story = {
+    args: {
         duration: 3000,
-        actions: [],
-    },
-};
+        title: 'Con tiempo'
+    }
+}
 
 export const WithActions: Story = {
     args: {
-        title: 'Atención',
-        subtitle: 'Hay algo que necesitas revisar.',
-        type: 'warning',
-        className: 'red',
+        title: 'Con acciones',
+        type: 'error',
         actions: [
             {
-                label: 'Redireccionar',
-                onClick: () => alert('Hola mundo')
+                label: 'Boton accion 1',
+                onClick: () => { }
+            },
+            {
+                label: 'Boton accion 2',
+                onClick: () => { }
             }
         ]
-    },
+    }
+}
+
+export const WithoutIcon: Story = {
+    args: {
+        title: 'Sin icono',
+        subtitle: 'Sin icono',
+        isIcon: false
+    }
 }
