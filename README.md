@@ -3,7 +3,7 @@
 The `Notification` component is designed to display notifications to users with various styles, options for actions, and configurable display durations. This component is built with React and TypeScript.
 
 # Use Basic Component
-```
+```typescript
 <NotifyHub
     title='Success notification'
     subtitle='Description of the Success Notification'
