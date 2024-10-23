@@ -5,6 +5,7 @@ storybook-static/
 node_modules/.cache/storybook/
 .storybook/
 tsconfig.json
+Notification.stories.tsx
 yarn.lock
 main.yml
 size.yml

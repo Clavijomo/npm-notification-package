@@ -57,7 +57,10 @@ export const Notification = ({
     }
 
     return (
-        <div className={`notification ${type} ${isClosing ? 'closing' : ''} ${className}`} role="alert">
+        <div
+            className={`notification ${type} ${isClosing ? 'closing' : ''} ${className}`}
+            role="alert"
+        >
             <div className="container-title-buttons">
                 {isIcon && (
                     <div className="container-notification">
