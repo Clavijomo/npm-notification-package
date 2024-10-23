@@ -22,11 +22,45 @@
 
 .notification-actions {
     margin-top: 10px;
+    display: flex;
+    gap: 10px;
 }
+
+.notification-actions button {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13.5px;
+    padding: 10px;
+}
+
+.notification.success .notification-actions button {
+    background-color: #d4f1d4;
+    color: #305733;
+    border: 1px solid #5bca5b;
+}
+
+.notification.error .notification-actions button {
+    background-color: #fde4e4;
+    color: #6e3333;
+    border: 1px solid #f8b3b3;
+}
+
+.notification.info .notification-actions button {
+    background-color: #d1ebf9;
+    color: #376983;
+    border: 1px solid #78c4ea;
+}
+
+.notification.warning .notification-actions button {
+    background-color: #feedcc;
+    color: #673d02;
+    border: 1px solid #e6bf84;
+}
+
 
 .notification p {
     max-width: 50%;
-    margin-top: 8px;
+    margin: 8px 0px;
     max-height: 70px;
     height: 100%;
     overflow: hidden;
@@ -35,9 +69,6 @@
     word-wrap: break-word;
 }
 
-.notification-actions button {
-    margin-right: 5px;
-}
 
 .notification[hidden] {
     opacity: 0;
@@ -78,7 +109,11 @@ h2 {
 }
 
 .container-title-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
+}
+
+.container-title-buttons button {
+    position: absolute;
+    right: 0;
+    top: 0;
 }

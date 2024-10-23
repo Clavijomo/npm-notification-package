@@ -1,24 +1,8 @@
+import { Close } from "@mui/icons-material"
 import React, { useEffect, useState } from "react"
 import { useSelectIcon } from "../hooks/useSelectIcon"
+import { Props } from "../interfaces/Notification"
 import './notification.css'
-import { Close } from "@mui/icons-material"
-
-interface Props {
-    title: string
-    subtitle?: string
-    isIcon?: boolean
-    type?: 'success' | 'error' | 'info' | 'warning'
-    duration?: number
-    actions?: Action[]
-    customIcon?: JSX.Element
-    className?: string
-    onClose?: () => void
-}
-
-interface Action {
-    label: string
-    onClick: () => void;
-}
 
 export const Notification = ({
     title,
