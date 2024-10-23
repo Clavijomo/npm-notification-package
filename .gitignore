@@ -1,11 +1,17 @@
 *.log
 .DS_Store
 node_modules
+
+#Storybook
 storybook-static/
+
+#nodeModules
 node_modules/.cache/storybook/
 .storybook/
 tsconfig.json
-Notification.stories.tsx
+
+# Ignore the stories folder inside src
+src/stories
 yarn.lock
 main.yml
 size.yml
