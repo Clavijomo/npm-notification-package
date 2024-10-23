@@ -1,0 +1,16 @@
+*.log
+.DS_Store
+node_modules
+storybook-static/
+node_modules/.cache/storybook/
+.storybook/
+tsconfig.json
+yarn.lock
+main.yml
+size.yml
+blah.test.tsx
+package-lock.json
+preview.ts
+.cache
+LICENSE
+dist
