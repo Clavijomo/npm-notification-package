@@ -1,10 +1,32 @@
 import { Close } from "@mui/icons-material"
 import React, { useEffect, useState } from "react"
 import { useSelectIcon } from "../hooks/useSelectIcon"
+<<<<<<< HEAD:src/components/Notification.tsx
 import { Props } from "../interfaces/Notification"
 import './notification.css'
+=======
+import './NotifyHub.css'
+import { Close } from "@mui/icons-material"
 
-export const Notification = ({
+interface Props {
+    title: string
+    subtitle?: string
+    isIcon?: boolean
+    type?: 'success' | 'error' | 'info' | 'warning'
+    duration?: number
+    actions?: Action[]
+    customIcon?: JSX.Element
+    className?: string
+    onClose?: () => void
+}
+
+interface Action {
+    label: string
+    onClick: () => void;
+}
+>>>>>>> feature/release-1.0.0:src/components/NotifyHub.tsx
+
+export const NotifyHub = ({
     title,
     subtitle,
     type = 'info',
@@ -33,6 +55,8 @@ export const Notification = ({
                 clearTimeout(removeTimer);
             };
         }
+
+        return () => { }
     }, [duration, onClose]);
 
     const handleClose = () => {
