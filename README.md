@@ -2,6 +2,25 @@
 
 The `Notification` component is designed to display notifications to users with various styles, options for actions, and configurable display durations. This component is built with React and TypeScript.
 
+# Use Basic Component
+```
+<NotifyHub
+    title='Success notification'
+    subtitle='Description of the Success Notification'
+    type='success'
+    actions={[
+        {
+            label: 'Custom button 1',
+            onClick: () => alert('Custom button 1')
+        },
+        {
+            label: 'Custom button 2',
+            onClick: () => alert('Custom button 2')
+        }
+    ]}
+/>
+```
+
 ## Features
 
 - **Different Notification Types**: Supports various notification types, including:
