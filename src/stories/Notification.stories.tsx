@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Notification } from "../components/Notification";
+import { Notification } from "../components/NotifyHub";
 
 const meta: Meta<typeof Notification> = {
     args: {

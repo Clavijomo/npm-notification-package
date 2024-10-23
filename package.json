@@ -1,8 +1,12 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/Clavijomo/npm-notification-package/tree/main",
+    "type": "git"
+  },
   "files": [
     "dist",
     "src"
@@ -35,8 +39,17 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "notification-package",
+  "name": "notify-hub",
   "author": "Clavijomo",
+  "keywords": [
+    "notification",
+    "react",
+    "custom",
+    "notify",
+    "package",
+    "npm"
+  ],
+  "description": "Custom notifications, functional properties, and variation of types and styles",
   "module": "dist/notification-package.esm.js",
   "size-limit": [
     {
@@ -64,6 +77,7 @@
     "husky": "^9.1.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^11.1.6",
     "storybook": "^8.3.6",
     "tsdx": "^0.14.1",

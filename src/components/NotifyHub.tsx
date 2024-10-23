@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useSelectIcon } from "../hooks/useSelectIcon"
-import './notification.css'
+import './NotifyHub.css'
 import { Close } from "@mui/icons-material"
 
 interface Props {
@@ -20,7 +20,7 @@ interface Action {
     onClick: () => void;
 }
 
-export const Notification = ({
+export const NotifyHub = ({
     title,
     subtitle,
     type = 'info',
@@ -49,6 +49,8 @@ export const Notification = ({
                 clearTimeout(removeTimer);
             };
         }
+
+        return () => { }
     }, [duration, onClose]);
 
     const handleClose = () => {
