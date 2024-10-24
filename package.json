@@ -1,12 +1,14 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/notify-hub.esm.js",
   "typings": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/notify-hub.esm.js",
-      "require": "./dist/notify-hub.cjs.production.min.js"
+      "require": "./dist/notify-hub.cjs.production.min.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {
@@ -55,7 +57,6 @@
     "npm"
   ],
   "description": "Custom notifications, functional properties, and variation of types and styles",
-  "module": "dist/notify-hub.esm.js",
   "size-limit": [
     {
       "path": "dist/notify-hub.cjs.production.min.js",
