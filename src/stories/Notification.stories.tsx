@@ -1,13 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-<<<<<<< HEAD
-import { Notification } from "../components/Notification";
+import { NotifyHub } from "../components/NotifyHub";
 import { Person } from '@mui/icons-material';
 import React from 'react';
-=======
-import { Notification } from "../components/NotifyHub";
->>>>>>> feature/release-1.0.0
 
-const meta: Meta<typeof Notification> = {
+const meta: Meta<typeof NotifyHub> = {
     args: {
         title: 'Notificación de info',
         type: 'info',
@@ -22,11 +18,11 @@ const meta: Meta<typeof Notification> = {
         isIcon: { control: { type: 'boolean' } }
     },
     title: 'Notification',
-    component: Notification
-} satisfies Meta<typeof Notification>
+    component: NotifyHub
+} satisfies Meta<typeof NotifyHub>
 
 export default meta;
-type Story = StoryObj<typeof Notification>;
+type Story = StoryObj<typeof NotifyHub>;
 
 export const Basic: Story = {
     args: {

@@ -1,15 +1,22 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/notify-hub.esm.js",
   "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/notify-hub.esm.js",
+      "require": "./dist/notify-hub.cjs.production.min.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "repository": {
     "url": "https://github.com/Clavijomo/npm-notification-package/tree/main",
     "type": "git"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
@@ -50,14 +57,13 @@
     "npm"
   ],
   "description": "Custom notifications, functional properties, and variation of types and styles",
-  "module": "dist/notification-package.esm.js",
   "size-limit": [
     {
-      "path": "dist/notification-package.cjs.production.min.js",
+      "path": "dist/notify-hub.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/notification-package.esm.js",
+      "path": "dist/notify-hub.esm.js",
       "limit": "10 KB"
     }
   ],
